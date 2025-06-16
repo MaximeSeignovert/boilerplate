@@ -311,7 +311,7 @@ export const Route = createFileRoute('/search')({
 
 1. **Clonez et installez** :
 ```bash
-git clone [votre-repo]
+git clone https://github.com/MaximeSeignovert/boilerplate.git
 cd boilerplate
 npm install
 ```
