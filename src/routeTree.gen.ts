@@ -8,65 +8,34 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as CounterRouteImport } from './routes/counter'
+import { Route as IndexRouteImport } from './routes/index'
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as CounterImport } from './routes/counter'
-import { Route as IndexImport } from './routes/index'
-
-// Create/Update Routes
-
-const CounterRoute = CounterImport.update({
+const CounterRoute = CounterRouteImport.update({
   id: '/counter',
   path: '/counter',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const IndexRoute = IndexImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-// Populate the FileRoutesByPath interface
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/counter': {
-      id: '/counter'
-      path: '/counter'
-      fullPath: '/counter'
-      preLoaderRoute: typeof CounterImport
-      parentRoute: typeof rootRoute
-    }
-  }
-}
-
-// Create and export the route tree
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/counter': typeof CounterRoute
 }
-
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/counter': typeof CounterRoute
 }
-
 export interface FileRoutesById {
-  __root__: typeof rootRoute
+  __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/counter': typeof CounterRoute
 }
-
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/counter'
@@ -75,37 +44,34 @@ export interface FileRouteTypes {
   id: '__root__' | '/' | '/counter'
   fileRoutesById: FileRoutesById
 }
-
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CounterRoute: typeof CounterRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/counter': {
+      id: '/counter'
+      path: '/counter'
+      fullPath: '/counter'
+      preLoaderRoute: typeof CounterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CounterRoute: CounterRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/counter"
-      ]
-    },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/counter": {
-      "filePath": "counter.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */
