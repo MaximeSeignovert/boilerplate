@@ -1,0 +1,40 @@
+{
+  "name": "create-boilerkwak",
+  "version": "1.0.0",
+  "description": "Crée une application React à partir de Boilerkwak.",
+  "type": "module",
+  "bin": {
+    "create-boilerkwak": "bin/create-boilerkwak.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "create",
+    "react",
+    "vite",
+    "typescript",
+    "tanstack-router",
+    "boilerplate"
+  ],
+  "author": "Maxime Seignovert",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximeSeignovert/boilerplate.git",
+    "directory": "packages/create-boilerkwak"
+  },
+  "bugs": {
+    "url": "https://github.com/MaximeSeignovert/boilerplate/issues"
+  },
+  "homepage": "https://github.com/MaximeSeignovert/boilerplate#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "degit": "^2.8.4"
+  }
+}

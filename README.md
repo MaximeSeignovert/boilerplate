@@ -1,6 +1,24 @@
-# Boilerplate React + TypeScript + Vite
+# Boilerkwak
 
-Un boilerplate moderne pour développer des applications React avec TypeScript, Vite, Shadcn/ui et TanStack Router.
+Boilerkwak est un boilerplate moderne pour développer des applications React avec TypeScript, Vite, Shadcn/ui et TanStack Router.
+
+## Créer un nouveau projet
+
+Depuis n'importe quel dossier, sans cloner le boilerplate :
+
+```bash
+npm create boilerkwak@latest mon-projet
+```
+
+La commande télécharge le template depuis GitHub, crée `mon-projet`,
+personnalise le nom du package et le titre de la page, puis installe les
+dépendances.
+
+Pour créer le projet sans lancer `npm install` :
+
+```bash
+npm create boilerkwak@latest mon-projet -- --no-install
+```
 
 ## 🚀 Technologies utilisées
 
