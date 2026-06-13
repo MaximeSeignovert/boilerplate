@@ -1,6 +1,6 @@
 {
   "name": "create-boilerkwak",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Crée une application React à partir de Boilerkwak.",
   "type": "module",
   "bin": {
@@ -24,13 +24,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MaximeSeignovert/boilerplate.git",
+    "url": "git+https://github.com/MaximeSeignovert/boilerkwak.git",
     "directory": "packages/create-boilerkwak"
   },
   "bugs": {
-    "url": "https://github.com/MaximeSeignovert/boilerplate/issues"
+    "url": "https://github.com/MaximeSeignovert/boilerkwak/issues"
   },
-  "homepage": "https://github.com/MaximeSeignovert/boilerplate#readme",
+  "homepage": "https://github.com/MaximeSeignovert/boilerkwak#readme",
   "publishConfig": {
     "access": "public"
   },

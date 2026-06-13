@@ -14,7 +14,7 @@ npm create boilerkwak@latest mon-projet -- --no-install
 ```
 
 Le template utilisé est
-[MaximeSeignovert/boilerplate](https://github.com/MaximeSeignovert/boilerplate).
+[MaximeSeignovert/boilerkwak](https://github.com/MaximeSeignovert/boilerkwak).
 
 ## Publication
 

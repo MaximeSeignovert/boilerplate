@@ -31,7 +31,7 @@ const destinationDirectory = path.resolve(process.cwd(), projectName)
 console.log(`Création de "${projectName}" avec Boilerkwak...`)
 
 try {
-  const emitter = degit('MaximeSeignovert/boilerplate', {
+  const emitter = degit('MaximeSeignovert/boilerkwak', {
     cache: false,
     force: false,
     verbose: false,

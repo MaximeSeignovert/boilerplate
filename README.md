@@ -83,7 +83,7 @@ src/
 1. **Clonez et installez** :
 ```bash
 npm install -g degit
-npx degit github:MaximeSeignovert/boilerplate .
+npx degit github:MaximeSeignovert/boilerkwak .
 npm install
 ```
 
